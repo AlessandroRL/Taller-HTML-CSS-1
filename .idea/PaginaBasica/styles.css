@@ -83,6 +83,78 @@ ul.impact-list strong {
     margin-bottom: 5px;
 }
 
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.solution-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.solution-card h3 {
+    color: #34a853;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Estilos de enlaces */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #174ea6;
+    text-decoration: underline;
+}
+
+a.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+a.learn-more:hover {
+    color: #174ea6;
+}
+
+.resources {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+ul.resources-list {
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+ul.resources-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul.resources-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #1a73e8;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -90,4 +162,26 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid #e0e0e0;
     margin-top: 20px;
+}
+
+footer .contact {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
 }
